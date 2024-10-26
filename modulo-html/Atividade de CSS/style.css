@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+*{
+    margin: auto;
+    padding: auto;
+    font-family: "Ubuntu" , sans-serif;
+}   
+
+#titulo-header {
+    background-color: #020617;
+    font-size: 2rem;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    padding: 2rem;
+    color: white;
+    animation:  changeColor 4s infinite alternate; 
+   
+}
+
+
+#conteudo-header{
+    background-color: #0F172A;
+    max-width: 100%;
+    height: 30em;
+   
+}
+
+.sessao-1 {
+    opacity: 0;
+    transform: translateY(100px);
+    transition: all 0.5s ease-out;
+    
+}
+
+
+.sessao-1.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.sessao-1 h1{
+    color: rgb(155, 8, 160);
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 5em;
+}
+
+.sessao-1 hr{
+    max-width: 10rem;
+    margin-top: 1.5em;
+    border-radius: 5px;
+    border-top: 5px solid rgb(155, 8, 160) ;
+}
+
+.sessao-2 p{
+    margin-top: 6em;
+    max-width: 80%;
+    width: 70%;
+    font-size:larger;
+}
+
+
+.sessao-3 h1{
+    color: rgb(155, 8, 160);
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 5em;
+}
+
+.sessao-3 hr{
+    max-width: 10rem;
+    margin-top: 1.5em;
+    border-radius: 5px;
+    border-top: 5px solid rgb(155, 8, 160) ;
+}
+
+.sessao-4 .container{
+    display: flex;
+    justify-content: space-between;
+    max-width: 800px;
+    margin: 5vw auto;
+    align-items: center;
+    
+}
+
+.sessao-4 .container .circulo{
+    width: 13vw; 
+    height: 13vw;
+    border-radius: 50%;
+    text-align: center;
+    background-color: rgb(155, 8, 160) ;
+
+}
+
+
+.sessao-4 .container .titulo-circulo{
+    margin-top: 15vw;
+    color:  rgb(155, 8, 160) ;
+    font-size: 40px;
+}
+
+.sessao-4 .container .texto-circulo{
+    color:  rgb(155, 8, 160) ;
+    font-size: 20px;
+    margin-top: 1em;
+}
+
+footer{
+    text-align: center;
+    background-color: rgb(155, 8, 160) ;
+    color: white;
+    margin-top: 20em;
+    max-width: 100%;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer h3{
+    margin: auto;
+}
+
+
+@media (max-width:900px) {
+    .sessao-4 .container{
+        margin: 5rem auto;   
+    }
+    .sessao-4 .container .circulo{
+        width: 27vw; 
+        height: 27vw;
+        
+    }
+    .sessao-4 .container .titulo-circulo{
+        margin-top: 28vw;
+        color:  rgb(155, 8, 160) ;
+        font-size: 20px;
+    }
+    
+    .sessao-4 .container .texto-circulo{
+        color:  rgb(155, 8, 160) ;
+        font-size: 14px;
+        margin-top: 1vw;
+    }
+
+    footer{
+        margin-top: 10em;
+    }
+}
+
+
+@keyframes changeColor {
+    0% {
+        color: white;
+    }
+    100% {
+        color: rgb(155, 8, 160); /* Altera a cor do texto */
+    }
+}
+

@@ -1,0 +1,12 @@
+div{
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.096);
+    width: 200px;
+    height: 200px;
+}
+
+h2{
+    flex-direction: row;
+    color:violet;
+    
+}

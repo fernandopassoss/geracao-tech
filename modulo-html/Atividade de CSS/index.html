@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital College</title>
+    <link href="style.css" rel="stylesheet">
+
+    <!-- Bootstrap CSS (via CDN) -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        /* Estilo opcional para melhorar a apresentação do carrossel */
+        .carousel-item img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header id="titulo-header">
+        Fernando Passos
+    </header>
+    <div id="conteudo-header">
+
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <a href="#">
+                        <img src="" class="d-block w-100" alt="Slide 1">
+                        
+                            <div class="carousel-caption d-none d-md-block">
+                                
+                                <h5 >Primeiro Slide</h5>
+                                <p >Descrição do primeiro slide.</p>
+                                
+                            </div>
+                        
+                    </a>
+                </div>
+
+                <div class="carousel-item">
+                    <a href="#">
+                        <img src="" class="d-block w-100" alt="Slide 2">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Segundo Slide</h5>
+                            <p>Descrição do segundo slide.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="carousel-item">
+                    <a>
+                        <img src="" class="d-block w-100" alt="Slide 3">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Terceiro Slide</h5>
+                            <p>Descrição do terceiro slide.</p>
+                        </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Anterior</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Próximo</span>
+            </a>
+        </div>
+    </div>
+
+    <section class="sessao-1">
+        <h1>
+            Digital College
+        </h1>
+        <hr />
+    </section>
+
+    <section class="sessao-2">
+        <p>
+            Lorem Ipsum é simplesmente um texto modelo da indústria tipográfica e
+            de impressão. Lorem Ipsum tem sido o texto modelo padrão da indústria
+            desde os anos 1500, quando um impressor desconhecido pegou uma galera
+            de tipos e os embaralhou para fazer um livro de espécimes de tipos. Ele
+            sobreviveu não apenas cinco séculos, mas também ao salto para a composição
+            eletrônica, permanecendo essencialmente inalterado. Foi popularizado
+            na década de 1960 com o lançamento das folhas Letraset contendo
+            passagens do Lorem Ipsum e, mais recentemente, com softwares de
+            editoração eletrônica como o Aldus PageMaker, incluindo versões do Lorem Ipsum.
+        </p>
+    </section>
+
+    <section class="sessao-3">
+        <h1>
+            Equipes
+        </h1>
+        <hr />
+    </section>
+
+    <section class="sessao-4">
+        <div class="container">
+            <div class="circulo">
+                <h2 class="titulo-circulo">
+                    Time 1
+                </h2>
+                <p class="texto-circulo">
+                    Desenvolvedor
+                </p>
+            </div>
+            <div class="circulo">
+                <h2 class="titulo-circulo">
+                    Time 2
+                </h2>
+                <p class="texto-circulo">
+                    Desenvolvedor
+                </p>
+            </div>
+            <div class="circulo">
+                <h2 class="titulo-circulo">
+                    Time 3
+                </h2>
+                <p class="texto-circulo">
+                    Desenvolvedor
+                </p>
+            </div>
+        </div>
+
+    </section>
+    <footer>
+        <h3>
+            Todos os direitos reservados
+        </h3>
+    </footer>
+
+    <!-- Bootstrap JS, Popper.js, and jQuery (via CDN) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        // Função para detectar se o elemento está visível na viewport
+        function isElementInViewport(el) {
+            const rect = el.getBoundingClientRect();
+            return (
+                rect.top >= 0 &&
+                rect.left >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            );
+        }
+
+
+        function animateOnScroll() {
+            const element = document.querySelector('.sessao-1');
+            if (isElementInViewport(element)) {
+                element.classList.add('active');
+            }
+        }
+
+
+        window.addEventListener('scroll', animateOnScroll);
+    </script>
+
+</body>
+
+</html>

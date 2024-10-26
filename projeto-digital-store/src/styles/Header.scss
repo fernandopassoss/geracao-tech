@@ -1,0 +1,105 @@
+$primary: #C92071;
+$secondary: #B5B6F2;
+$tertiary: #991956;
+$error: #EE4266;
+$success: #52CA76;
+$warning: #F6AA1C;
+
+$dark-gray :#1F1F1F;
+$dark-gray-2: #474747;
+$dark-gray-3 :#666666;
+$light-gray :#8F8F8F;
+$light-gray-2 :#CCCCCC;
+$light-gray-3: #F5F5F5;
+$white: #FFFFFF;
+
+@import "~bootstrap/scss/bootstrap";
+
+/*
+@mixin button-styles($bg-color) {
+    padding: 5px 40px;
+    border: none;
+    border-radius: 10px;
+    background-color: $bg-color;
+}
+*/
+
+// Global styles
+body {
+    font-family: "Inter", sans-serif;
+    margin: 0;
+}
+
+.navbar {
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    width: 90%;
+
+    .navbar-top {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: auto;
+        padding: 1rem;
+
+        .search-box {
+            position: relative;
+            width: 800px;
+            margin-left: 1rem;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 1rem;
+            border: none;
+            background-color: $light-gray-3;
+            border-radius: 4px;
+        }
+
+        .search-icon {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #aaa;
+            font-size: 34px;
+        }
+
+        .links {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 3rem;
+
+        }
+
+        #cadastre-se {
+            color: $dark-gray;
+            margin-left: 3rem;
+            text-decoration: underline;
+        }
+
+        .botao {
+            width: 114px;
+            height: 40px;
+            border-radius: 4px;
+            font-weight: 100;
+            color: $white;
+            font-size: 14px;
+            border: none;
+            background-color: $primary;
+
+
+        }
+
+
+    }
+
+
+    .navbar-bot {
+       
+        
+    }
+
+}

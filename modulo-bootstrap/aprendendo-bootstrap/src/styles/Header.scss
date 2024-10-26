@@ -1,0 +1,75 @@
+// Variables
+$primary: #C92071;
+$secondary: #B5B6F2;
+$tertiary: #991956;
+$error: #EE4266;
+$success: #52CA76;
+$warning: #F6AA1C;
+$gray-light: #e7e7e7;
+
+// Mixins
+@mixin button-styles($bg-color) {
+    padding: 5px 40px;
+    border: none;
+    border-radius: 10px;
+    background-color: $bg-color;
+}
+
+// Global styles
+body {
+    font-family: "Inter", sans-serif;
+}
+
+// Navbar 1
+#navbar-1 {
+    padding: 1rem;
+
+    .container {
+        display: flex;
+    }
+
+    #pesquisar {
+        border: none;
+        padding: 10px;
+        width: 50%;
+        border-radius: 10px;
+        background-color: $gray-light;
+    }
+
+    .navbar-collapse {
+       display: flexbox;
+
+        .nav {
+            .nav-link {
+                button {
+                    @include button-styles($primary);
+                }
+
+            }
+        }
+
+        .testeLinks {
+            
+
+        }
+
+    }
+
+
+    button {
+        @include button-styles($primary)
+    }
+}
+
+// Navbar 2
+#navbar-2 {
+    .container {
+        justify-content: start;
+        background-color: white;
+        gap: 1rem;
+    }
+
+    .nav-link {
+        justify-content: space-between;
+    }
+}
