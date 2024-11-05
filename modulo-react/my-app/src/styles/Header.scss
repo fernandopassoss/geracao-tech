@@ -1,0 +1,24 @@
+.header{
+    display: flex;
+    justify-content: space-around;
+    padding: 30px;
+    width: 80%;
+    margin: auto;
+
+    .active{
+        font-size: none;
+        font-size: 30px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        background-color: pink;
+        padding: 10px;
+        border-radius: 9px;
+        text-decoration:none;
+        color: black;
+    }
+}
+
+.imagem{
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+}
