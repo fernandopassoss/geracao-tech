@@ -1,0 +1,162 @@
+$primary: #C92071;
+$secondary: #B5B6F2;
+$tertiary: #991956;
+$error: #EE4266;
+$success: #52CA76;
+$warning: #F6AA1C;
+
+$dark-gray :#1F1F1F;
+$dark-gray-2: #474747;
+$dark-gray-3 :#666666;
+$light-gray :#8F8F8F;
+$light-gray-2 :#CCCCCC;
+$light-gray-3: #F5F5F5;
+$white: #FFFFFF;
+
+@import "~bootstrap/scss/bootstrap";
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+.slide{
+    height: 800px;
+   
+}
+
+.slideshow-container {
+    position: relative;
+    height: 700px;
+
+    .mySlides {
+        display: none;
+        opacity: 0;
+        transition: opacity 1.5s ease;
+
+        &.active {
+            opacity: 1;
+            
+            z-index: 1;
+        }
+
+        .bolas {
+
+            color: #f2f2f2;
+            font-size: 7px;
+           
+            position: absolute;
+            margin-top: -40px;
+            width: 100%;
+            text-align: center;
+
+
+            .dot {
+
+                cursor: pointer;
+                height: 11px;
+                width: 11px;
+                margin: 0 2px;
+                background-color: #bbb;
+                border-radius: 50%;
+                display: inline-block;
+                transition: background-color 0.6s ease;
+
+                &.active,
+                &:hover {
+                    background-color: $primary;
+                }
+            }
+        }
+
+        .imagens {
+            width: 100%;
+            max-height: 770px;
+        }
+
+
+        &.fade {
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+    }
+
+    .prev,
+    .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        margin-top: -22px;
+        padding: 16px;
+        color: rgb(14, 14, 14);
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        user-select: none;
+        border: none;
+        opacity: 1;
+
+        &.prev {
+            left: 0;
+            border-radius: 0 3px 3px 0;
+        }
+
+        &.next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        &:hover {
+            background-color: rgba(212, 212, 212, 0.8);
+        }
+    }
+}
+
+
+.texto {
+    position: relative;
+    margin-top: -570px;
+    margin-left: 14rem;
+
+
+    .melhores {
+        font-weight: bold;
+        color: $warning;
+    }
+
+    .queima {
+        font-weight: bold;
+        font-size: 90px;
+    }
+
+    .consequat {
+        color: $dark-gray-2;
+        margin: 40px auto;
+    }
+
+    .botao {
+        position: absolute;
+        width: 220px;
+        border-radius: 8px;
+        font-weight: bold;
+        color: $white;
+        font-size: 16px;
+        border: none;
+        color: white;
+        background-color: $primary;
+        padding: 13px;
+
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: 0.1;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
