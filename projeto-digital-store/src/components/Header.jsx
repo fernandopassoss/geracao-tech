@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import '../styles/Header.scss'
 import Logo from './Logo'
 import minicart from '../assets/mini-cart.svg'
-import { Nav, NavLink } from 'react-bootstrap';
+import {  NavLink } from 'react-bootstrap';
 import { CiSearch } from "react-icons/ci";
 import Slideshow from './Slideshow';
 import CollectionFeatured from './CollectionFeatured';
@@ -20,7 +20,7 @@ function Header() {
 
 
     return (
-        <div>
+        <div className='teste'>
             <div className='navbar'>
                 <div className="navbar-top">
                     <Logo />
@@ -49,8 +49,6 @@ function Header() {
                 <div className="navbar-bot">
                     <NavLink to='/' className='link' onClick={() => exibirComponente('home')} id="myButton">
                         Home
-
-
                         {
                             ativarComponente === 'home' && (
                                 <div>
@@ -87,6 +85,9 @@ function Header() {
 
             </div>
             <div>
+                
+            </div>
+
                 {
                     ativarComponente === 'home' && (
                         <div>
@@ -99,11 +100,11 @@ function Header() {
                 {
                     ativarComponente === 'produtos' && (
                         <div>
-                            <ProductListing/>
+                          
                         </div>
                     )
                 }
-            </div>
+            
         </div>
     )
 }
