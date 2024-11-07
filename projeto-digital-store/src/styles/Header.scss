@@ -86,19 +86,23 @@ body {
         }
     }
 
-    .navbar-bot {
-        display: flex;
-        flex-direction: row;
-        margin: auto;
-        padding: 1rem;
-        width: 85%;
-        
-        justify-content: flex-start;
-        gap: 1rem; 
+        .navbar-bot {
+            display: flex;
+            flex-direction: row;
+            margin: auto;
+            padding: 1rem;
+            width: 85%;
+            
+            justify-content: flex-start;
+            gap: 1rem; 
 
-        .link {
-            color: $primary;
-        }
+            .link {
+                color: $primary;
+
+                &::before{
+                    color: black;
+                }
+            }
 
         .barra{
             max-width: 10rem;

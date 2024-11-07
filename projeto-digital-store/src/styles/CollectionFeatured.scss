@@ -33,7 +33,7 @@ $white: #FFFFFF;
 
     .imgcolecao{
         margin:  auto 0px;
-        width: 480px;
+        max-width: 480px;
         height: 298px;
         border-radius: 11px;
         
@@ -42,7 +42,7 @@ $white: #FFFFFF;
     
     .infos{
        margin-top:-380px;
-       margin-left: 40px;
+       margin-left: 30px;
 
        .porcentagem{
             position: relative;

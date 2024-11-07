@@ -6,74 +6,104 @@ import { Nav, NavLink } from 'react-bootstrap';
 import { CiSearch } from "react-icons/ci";
 import Slideshow from './Slideshow';
 import CollectionFeatured from './CollectionFeatured';
+import ProductListing from './ProductListing';
 
 
 function Header() {
 
+      
+    const [ativarComponente, setAtivarComponente] = useState('home');
 
-    
-        const [isExpanded, setIsExpanded] = useState(false);
+    const exibirComponente = (item) => {
+        setAtivarComponente(item);
+    }
 
-        const toglleExpand = () => {
-            setIsExpanded(!isExpanded);
-        }
-    
 
     return (
-        <div className='navbar'>
-            <div className="navbar-top">
-                <Logo />
-                <div className="search-box">
-                    <input type="text" placeholder="Pesquisar..." />
-                    <CiSearch className="search-icon" />
+        <div>
+            <div className='navbar'>
+                <div className="navbar-top">
+                    <Logo />
+                    <div className="search-box">
+                        <input type="text" placeholder="Pesquisar..." />
+                        <CiSearch className="search-icon" />
+                    </div>
+                    <div className='links'>
+                        <a href='#' className='link' id='cadastre-se'>
+                            Cadastre-se
+                        </a>
+                        <a href='#' className='link'>
+                            <button className='botao'>
+                                Entrar
+                            </button>
+                        </a>
+                        <a href='#' className='link'>
+                            <img src={minicart}>
+                            </img>
+                        </a>
+                    </div>
+
                 </div>
-                <div className='links'>
-                    <a href='#' className='link' id='cadastre-se'>
-                        Cadastre-se
-                    </a>
-                    <a href='#' className='link'>
-                        <button className='botao'>
-                            Entrar
-                        </button>
-                    </a>
-                    <a href='#' className='link'>
-                        <img src={minicart}>
-                        </img>
-                    </a>
+
+
+                <div className="navbar-bot">
+                    <NavLink to='/' className='link' onClick={() => exibirComponente('home')} id="myButton">
+                        Home
+
+
+                        {
+                            ativarComponente === 'home' && (
+                                <div>
+                                    
+                                    <hr className='barra'></hr>
+
+                                </div>
+
+                            )
+                        }
+                    </NavLink>
+                    <NavLink to='/' className='link'  onClick={()=>exibirComponente('produtos')}>
+                        Produtos
+                        {
+                            ativarComponente === 'produtos' && (
+                                <div>
+                                    <hr className='barra'></hr>
+
+                                </div>
+
+                            )
+                        }
+                    </NavLink>
+                    <NavLink to='/' >
+                        Categorias
+
+                    </NavLink>
+                    <NavLink to='/'>
+                        Meus Pedidos
+
+                    </NavLink>
                 </div>
+
 
             </div>
-
-
-            <div className="navbar-bot">
-                <NavLink to='/' className='link' onClick={toglleExpand} >
-                Home
-
-                <hr className='barra'></hr> 
+            <div>
                 {
-                        isExpanded && (
-                            <div>
-                               <Slideshow/>
-                               <CollectionFeatured/>    
-                            </div>
-                            
-                        )
-                    }
-                </NavLink>
-                <NavLink to='/' >
-                    Produtos
+                    ativarComponente === 'home' && (
+                        <div>
+                            <Slideshow />
+                            <CollectionFeatured />
+                        </div>
 
-                </NavLink>
-                <NavLink to='/' >
-                    Categorias
-
-                </NavLink>
-                <NavLink to='/'>
-                    Meus Pedidos
-
-                </NavLink>
+                    )
+                }
+                {
+                    ativarComponente === 'produtos' && (
+                        <div>
+                            <ProductListing/>
+                        </div>
+                    )
+                }
             </div>
-            
         </div>
     )
 }

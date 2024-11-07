@@ -4,14 +4,14 @@ import Texto from '../components/Texto'
 import Logo from '../components/Logo'
 import SegundaLogo from '../components/SegundaLogo'
 
+
 function HomePage() {
         
 
     
   return (
     <div>
-      <Header/>
-      <Texto />
+      <Header></Header>
     </div>
   )
 }
