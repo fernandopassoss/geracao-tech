@@ -10,17 +10,25 @@ function Footer() {
         <div className='footer'>
             <div className='footer-top'>
                 <div className='coluna1'>
-                    <img src={logo}></img>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur<br />
-                        adipiscing elit, sed do eiusmod tempor<br />
-                        incididunt ut labore et dolore.
-                    </p>
-                    <div className='icones'>
-                        <img src={facebook}></img>
-                        <img src={instagram}></img>
-                        <img src={twitter}></img>
-                    </div>
+                    <ul>
+                        <li>
+                            <img src={logo}></img>
+                        </li>
+                        <li>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur<br />
+                                adipiscing elit, sed do eiusmod tempor<br />
+                                incididunt ut labore et dolore.
+                            </p>
+                        </li>
+                        <li>
+                            <div className='icones'>
+                                <img src={facebook}></img>
+                                <img src={instagram}></img>
+                                <img src={twitter}></img>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
                 <div className='coluna2'>
                     <p className='titulo'>
@@ -89,13 +97,15 @@ function Footer() {
                     </div>
                 </div>
             </div>
+            
             <div className='footer-bot'>
-                <hr className='barra'/>
+            
+                <hr className='barra' />
                 <p>
                     @ 2022 Digital College
                 </p>
             </div>
-            
+
         </div>
     )
 }
