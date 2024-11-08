@@ -96,19 +96,32 @@ body {
             justify-content: flex-start;
             gap: 1rem; 
 
+
             .link {
-                color: $primary;
+                
 
                 &::before{
                     color: black;
                 }
             }
 
+            .ativo{
+                color: $primary;
+                font-weight: bold;
+                
+            }
+
+            .inativo{
+                color: black;
+            }
+
         .barra{
             max-width: 10rem;
             margin-top: -1px;
             opacity: 1;
-            border: 2px solid ;
+            border: 1px solid ;
+            border-radius: 2px;
+            color: $primary;
         }
     }
 }

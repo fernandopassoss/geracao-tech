@@ -15,36 +15,37 @@ $white: #FFFFFF;
 
 
 
-#texto{
+#texto {
     display: flex;
     max-width: 79%;
     justify-content: start;
-    margin:  50px auto;
+    margin: 50px auto;
     font-family: 'Inter', sans-serif;
     font-size: 30px;
     font-style: bold;
 }
 
-.colecao{
+.colecao {
     display: flex;
     max-width: 80%;
     margin: auto;
     justify-content: space-between;
 
-    .imgcolecao{
-        margin:  auto 0px;
+    .imgcolecao {
+        margin: auto 0px;
         max-width: 480px;
         height: 298px;
         border-radius: 11px;
-        
+
     }
 
-    
-    .infos{
-       margin-top:-380px;
-       margin-left: 30px;
 
-       .porcentagem{
+    .infos {
+        margin-top: -380px;
+       padding-left: 2rem;
+
+
+        .porcentagem {
             position: relative;
             margin: 100px 0px;
             background-color: #E7FF86;
@@ -55,16 +56,17 @@ $white: #FFFFFF;
             font-size: 17px;
             justify-content: start;
 
-       }
-       .botao{
-        padding: 15px;
-        border: none;
-        background-color: $light-gray-3;
-        color: $primary;
-        width: 45%;
-        font-weight: bold;
-        border-radius: 10px;
-       }
+        }
+
+        .botao {
+            padding: 15px;
+            border: none;
+            background-color: $light-gray-3;
+            color: $primary;
+            width: 45%;
+            font-weight: bold;
+            border-radius: 10px;
+        }
     }
 
 
