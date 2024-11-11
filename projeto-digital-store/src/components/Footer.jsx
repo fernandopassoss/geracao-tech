@@ -10,11 +10,11 @@ function Footer() {
         <div className='footer'>
             <div className='footer-top'>
                 <div className='coluna1'>
-                    <ul>
+                    <ul className='lista1'>
                         <li>
                             <img src={logo}></img>
                         </li>
-                        <li>
+                        <li id='textoFooter'>
                             <p>
                                 Lorem ipsum dolor sit amet, consectetur<br />
                                 adipiscing elit, sed do eiusmod tempor<br />
@@ -31,64 +31,76 @@ function Footer() {
                     </ul>
                 </div>
                 <div className='coluna2'>
-                    <p className='titulo'>
-                        Informação
-                    </p>
+
                     <div className='items-coluna2'>
-                        <ul>
+                        <ul className='lista2'>
                             <li>
+                                <p className='titulo'>
+                                    Informação
+                                </p>
+                            </li>
+                            <li className='clicavel'>
                                 Sobre Drip Store
                             </li>
-                            <li>
+                            <li  className='clicavel'>
                                 Segurança
-                            </li>
-                            <li>
+                            </li >
+                            <li  className='clicavel'>
                                 Wishlist
                             </li>
-                            <li>
+                            <li  className='clicavel'>
                                 Blog
                             </li>
-                            <li>
+                            <li  className='clicavel'>
                                 Trabalhe Conosco
                             </li>
-                            <li>
+                            <li  className='clicavel'>
                                 Meus Pedidos
                             </li>
                         </ul>
                     </div>
                 </div>
                 <div className='coluna3'>
-                    <p className='titulo'>
-                        Categorias
-                    </p>
+
                     <div className='items-coluna3'>
-                        <ul>
+                        <ul className='lista3'>
                             <li>
+                                <p className='titulo'>
+                                    Categorias
+                                </p>
+                            </li>
+
+                            <li  className='clicavel'>
                                 Camisetas
                             </li>
-                            <li>
+                            <li  className='clicavel'>
                                 Calças
                             </li>
-                            <li>
+                            <li  className='clicavel'>
                                 Bonés
                             </li>
-                            <li>
+                            <li  className='clicavel'>
                                 Headphones
                             </li>
-                            <li>
+                            <li  className='clicavel'>
                                 Tênis
                             </li>
                         </ul>
                     </div>
                 </div>
                 <div className='coluna4'>
-                    <p className='titulo'>
-                        Contato
-                    </p>
+
                     <div className='items-coluna4'>
-                        <ul>
+                        <ul className='lista4'>
                             <li>
-                                Av. Santos Dumont, 1510 - 1 andar - Aldeota, Fortaleza - CE, 60150-161
+                                <p className='titulo'>
+                                    Contato
+                                </p>
+                            </li>
+                            <li>
+                                Av. Santos Dumont, 1510 - 1 <br></br>
+                                andar - Aldeota, Fortaleza - <br></br>
+                                CE, 60150-161
                             </li>
                             <li>
                                 (85) 3051-3411
@@ -97,14 +109,17 @@ function Footer() {
                     </div>
                 </div>
             </div>
-            
+
+
             <div className='footer-bot'>
-            
-                <hr className='barra' />
-                <p>
+
+                <hr className='barraFooter' />
+                <p className='digitalCollegeFooter'>
                     @ 2022 Digital College
                 </p>
             </div>
+
+
 
         </div>
     )
