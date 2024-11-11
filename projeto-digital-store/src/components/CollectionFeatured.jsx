@@ -20,12 +20,12 @@ function CollectionFeatured() {
                     <img src={collection1} className='imgcolecao'>
 
                     </img>
-                    <div className='infos'>
+                    <div className='infos1'>
                         <p className='porcentagem'>
                             30% OFF
                         </p>
                         <br />
-                        <button className='botao'>
+                        <button className='botao1'>
                             Comprar
                         </button>
                     </div>
@@ -36,12 +36,12 @@ function CollectionFeatured() {
 
                 <div>
                     <img src={collection2} className='imgcolecao'></img>
-                    <div className='infos'>
+                    <div className='infos2'>
                         <p className='porcentagem'>
                             30% OFF
                         </p>
                         <br />
-                        <button className='botao'>
+                        <button className='botao2'>
                             Comprar
                         </button>
                     </div>
@@ -50,12 +50,12 @@ function CollectionFeatured() {
                 <div>
                     <img src={collection3} className='imgcolecao'>
                     </img>
-                    <div className='infos'>
+                    <div className='infos3'>
                         <p className='porcentagem'>
                             30% OFF
                         </p>
                         <br />
-                        <button className='botao'>
+                        <button className='botao3'>
                             Comprar
                         </button>
                     </div>

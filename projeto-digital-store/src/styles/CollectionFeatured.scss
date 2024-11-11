@@ -15,6 +15,7 @@ $white: #FFFFFF;
 
 
 
+
 #texto {
     display: flex;
     max-width: 79%;
@@ -35,30 +36,30 @@ $white: #FFFFFF;
         margin: auto 0px;
         max-width: 480px;
         height: 298px;
+        
         border-radius: 11px;
 
     }
 
 
-    .infos {
-        margin-top: -380px;
-       padding-left: 2rem;
-
-
+    .infos1, .infos2, .infos3 {
+       margin-top: -380px;
+       
         .porcentagem {
             position: relative;
-            margin: 100px 0px;
+            margin: 98px 0px;
+            flex: 1;
             background-color: #E7FF86;
             border-radius: 19px;
             font-weight: bold;
-            padding: 7px;
+            padding: 7px 10px;
             max-width: 100px;
             font-size: 17px;
             justify-content: start;
 
         }
 
-        .botao {
+        .botao1, .botao2, .botao3 {
             padding: 15px;
             border: none;
             background-color: $light-gray-3;
@@ -66,7 +67,20 @@ $white: #FFFFFF;
             width: 45%;
             font-weight: bold;
             border-radius: 10px;
+
         }
+    }
+
+    .infos1{
+        margin-left: 30px;
+    }
+
+    .infos2{
+        margin-left: 42px;
+    }
+
+    .infos3{
+        margin-left: 20px;
     }
 
 

@@ -62,27 +62,31 @@ function Header() {
                 {ativarComponente === 'home' && (
                     <div>
                         <Slideshow />
-                        <CollectionFeatured />
+                        <CollectionFeatured/>
                     </div>
                 )}
 
                 {ativarComponente === 'produtos' && (
                     <div>
-                        <ProductListing />
+                       
+                        
+                        <CollectionFeatured />
                     </div>
                 )
                 }
 
                 {ativarComponente === 'categorias' && (
                     <div>
-                        <ProductListing />
+                        <Slideshow />
+                        <CollectionFeatured />
                     </div>
                 )
                 }
 
                 {ativarComponente === 'pedidos' && (
                     <div>
-                        <ProductListing />
+                        <Slideshow />
+                        <CollectionFeatured />
                     </div>
                 )
                 }
