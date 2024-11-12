@@ -5,7 +5,7 @@ import ProductCard from './ProductCard'
 function ProductListing() {
   return (
     <div>
-      <div>
+      <div className='listing-cabecario'>
         <p>
         Produtos em alta
         </p>

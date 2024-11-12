@@ -7,8 +7,9 @@ function Section() {
   return (
     <div style={{backgroundColor:'#F9F8FE'}}>
       <CollectionFeatured/>
-      <SpecialOffer/>
       <ProducListing/>
+      <SpecialOffer/>
+      
     </div>
   )
 }
