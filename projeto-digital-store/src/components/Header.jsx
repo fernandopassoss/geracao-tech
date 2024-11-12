@@ -6,8 +6,6 @@ import { NavLink } from 'react-bootstrap';
 import { CiSearch } from "react-icons/ci";
 import Slideshow from './Slideshow';
 import CollectionFeatured from './CollectionFeatured';
-import ProductListing from './ProductListing';
-import SpecialOffer from './SpecialOffer';
 import Section from './Section';
 
 function Header() {

@@ -1,10 +1,20 @@
 import React from 'react'
-import Logo from './Logo'
+
+import ProductCard from './ProductCard'
 
 function ProductListing() {
   return (
     <div>
-      <Logo/>
+      <div>
+        <p>
+        Produtos em alta
+        </p>
+        <a>
+        Ver todos
+        </a>
+      </div>
+      Lista dos produtos com 8 produto
+      <ProductCard/>
     </div>
   )
 }
