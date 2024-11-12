@@ -8,6 +8,7 @@ import Slideshow from './Slideshow';
 import CollectionFeatured from './CollectionFeatured';
 import ProductListing from './ProductListing';
 import SpecialOffer from './SpecialOffer';
+import Section from './Section';
 
 function Header() {
     const [ativarComponente, setAtivarComponente] = useState('home');
@@ -61,10 +62,9 @@ function Header() {
 
             <div>
                 {ativarComponente === 'home' && (
-                    <div>
+                    <div style={{backgroundColor:'#F9F8FE'}}>
                         <Slideshow />
-                        <CollectionFeatured/>
-                        <SpecialOffer/>
+                        <Section/>
                     </div>
                 )}
 

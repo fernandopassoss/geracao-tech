@@ -30,7 +30,7 @@ function Slideshow() {
     };
 
     return (
-        <div className='slide'>
+        <div className='slide' style={{backgroundColor:'#F9F8FE'}}>
             <div className="slideshow-container">
                 {slides.map((slide, index) => (
                     <div key={index} className={`mySlides fade ${index === slideIndex ? 'active' : ''}`} style={{ display: index === slideIndex ? 'block' : '' }}>

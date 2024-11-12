@@ -7,7 +7,7 @@ import twitter from '../assets/twitter.svg'
 
 function Footer() {
     return (
-        <div className='footer'>
+        <div className='footer' >
             <div className='footer-top'>
                 <div className='coluna1'>
                     <ul className='lista1'>
