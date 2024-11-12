@@ -1,0 +1,80 @@
+$primary: #C92071;
+$secondary: #B5B6F2;
+$tertiary: #991956;
+$error: #EE4266;
+$success: #52CA76;
+$warning: #F6AA1C;
+
+$dark-gray :#1F1F1F;
+$dark-gray-2: #474747;
+$dark-gray-3 :#666666;
+$light-gray :#8F8F8F;
+$light-gray-2 :#CCCCCC;
+$light-gray-3: #F5F5F5;
+$white: #FFFFFF;
+
+
+.specialoffer{
+    
+    max-width: 80%;
+    display: flex;
+    margin: 10rem auto;
+    height: 30rem;
+    justify-content: space-around;
+
+    .banner{
+        
+        width: 49%;
+        position: relative;  
+
+        #ellipse{
+            margin-top: 3rem;
+            margin-left: 6rem;
+        }
+
+        #laye1{
+            position: absolute;
+            margin-top: 4rem;
+            left: 0;
+        }
+    }
+    .infos{
+        
+        width: 51%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 60px;
+        margin-left: 2rem;
+
+        #infos-ofertas{
+            font-weight: bold;
+            font-size: 14px;
+            color: $primary;
+        }
+
+        #infos-titulo{
+            color: $dark-gray-2;
+            font-size: 48px;
+            font-weight: bold;
+        }
+
+        #infos-texto{
+            letter-spacing: 0.75px;
+            color: $dark-gray-2;
+        }
+
+        #infos-botao{
+            width: 200px;
+            height: 40px;
+            border-radius: 4px;
+            font-weight: bold;
+            color: $white;
+            font-size: 14px;
+            border: none;
+            margin-top: 1rem;
+            color: white;
+            background-color: $primary;
+        }
+    }
+}

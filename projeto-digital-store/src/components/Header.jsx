@@ -7,6 +7,7 @@ import { CiSearch } from "react-icons/ci";
 import Slideshow from './Slideshow';
 import CollectionFeatured from './CollectionFeatured';
 import ProductListing from './ProductListing';
+import SpecialOffer from './SpecialOffer';
 
 function Header() {
     const [ativarComponente, setAtivarComponente] = useState('home');
@@ -63,6 +64,7 @@ function Header() {
                     <div>
                         <Slideshow />
                         <CollectionFeatured/>
+                        <SpecialOffer/>
                     </div>
                 )}
 
