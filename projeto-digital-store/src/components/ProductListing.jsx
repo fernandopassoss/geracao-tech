@@ -1,21 +1,27 @@
 import React from 'react'
 import '../styles/ProductListing.scss'
-import ProductCard from './ProductCard'
+import { BsArrowRight } from "react-icons/bs";
 
 function ProductListing() {
   return (
-    <div>
-      <div className='listing-cabecario'>
-        <p>
+<div>
+    <div className='listing-cabecario'>
+      <p className='listing-cabecario-item1'>
         Produtos em alta
-        </p>
-        <a>
-        Ver todos
+      </p>
+      <div className='listing-cabecario-item2'>
+        <a href='#' className='cabecario-link'>
+          Ver todos
         </a>
+        <BsArrowRight className='cabecario-seta' />
       </div>
-      Lista dos produtos com 8 produto
-     
+      
     </div>
+    <div className='listing'>
+      teste
+    </div>
+    </div>
+
   )
 }
 
