@@ -1,0 +1,7 @@
+@use 'colors';
+
+.card{
+    background-color: colors.$primary;
+    width: 292px;
+    height: 439px;
+}
