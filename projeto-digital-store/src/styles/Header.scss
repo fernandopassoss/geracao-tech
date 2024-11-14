@@ -1,17 +1,4 @@
-$primary: #C92071;
-$secondary: #B5B6F2;
-$tertiary: #991956;
-$error: #EE4266;
-$success: #52CA76;
-$warning: #F6AA1C;
-
-$dark-gray :#1F1F1F;
-$dark-gray-2: #474747;
-$dark-gray-3 :#666666;
-$light-gray :#8F8F8F;
-$light-gray-2 :#CCCCCC;
-$light-gray-3: #F5F5F5;
-$white: #FFFFFF;
+@use 'colors';
 
 @import "~bootstrap/scss/bootstrap";
 
@@ -52,7 +39,7 @@ body {
             width: 100%;
             padding: 1rem;
             border: none;
-            background-color: $light-gray-3;
+            background-color: colors.$light-gray-3;
             border-radius: 4px;
         }
 
@@ -74,7 +61,7 @@ body {
         }
 
         #cadastre-se {
-            color: $dark-gray;
+            color: colors.$dark-gray;
             margin-left: 3rem;
             text-decoration: underline;
         }
@@ -88,7 +75,7 @@ body {
             font-size: 14px;
             border: none;
             color: white;
-            background-color: $primary;
+            background-color: colors.$primary;
         }
     }
 
@@ -112,7 +99,7 @@ body {
             }
 
             .ativo{
-                color: $primary;
+                color: colors.$primary;
                 font-weight: bold;
                 
             }
@@ -127,7 +114,7 @@ body {
             opacity: 1;
             border: 1px solid ;
             border-radius: 2px;
-            color: $primary;
+            color: colors.$primary;
         }
     }
 }

@@ -1,5 +1,5 @@
 import React from 'react'
-
+import '../styles/ProductListing.scss'
 import ProductCard from './ProductCard'
 
 function ProductListing() {
@@ -14,7 +14,7 @@ function ProductListing() {
         </a>
       </div>
       Lista dos produtos com 8 produto
-      <ProductCard/>
+     
     </div>
   )
 }

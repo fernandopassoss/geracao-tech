@@ -1,20 +1,4 @@
-$primary: #C92071;
-$secondary: #B5B6F2;
-$tertiary: #991956;
-$error: #EE4266;
-$success: #52CA76;
-$warning: #F6AA1C;
-
-$dark-gray :#1F1F1F;
-$dark-gray-2: #474747;
-$dark-gray-3 :#666666;
-$light-gray :#8F8F8F;
-$light-gray-2 :#CCCCCC;
-$light-gray-3: #F5F5F5;
-$white: #FFFFFF;
-
-
-
+@use 'colors';
 
 #texto {
     display: flex;
@@ -65,8 +49,8 @@ $white: #FFFFFF;
             .botao1, .botao2, .botao3 {
                 padding: 15px;
                 border: none;
-                background-color: $light-gray-3;
-                color: $primary;
+                background-color: colors.$light-gray-3;
+                color: colors.$primary;
                 width: 45%;
                 font-weight: bold;
                 border-radius: 10px;
@@ -123,7 +107,7 @@ $white: #FFFFFF;
         align-items: center;
         gap: 6rem;
         font-size: 15px;
-        color: $dark-gray-2;
+        color: colors.$dark-gray-2;
         font-weight: bold;
         
 

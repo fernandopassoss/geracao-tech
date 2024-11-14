@@ -1,18 +1,4 @@
-$primary: #C92071;
-$secondary: #B5B6F2;
-$tertiary: #991956;
-$error: #EE4266;
-$success: #52CA76;
-$warning: #F6AA1C;
-
-$dark-gray :#1F1F1F;
-$dark-gray-2: #474747;
-$dark-gray-3 :#666666;
-$light-gray :#8F8F8F;
-$light-gray-2 :#CCCCCC;
-$light-gray-3: #F5F5F5;
-$white: #FFFFFF;
-
+@use 'colors';
 
 @mixin tabela{
     list-style: none;
@@ -25,8 +11,8 @@ $white: #FFFFFF;
 }
 
 .footer {
-    background-color: $dark-gray;
-    color: $white; 
+    background-color: colors.$dark-gray;
+    color: colors.$white; 
     padding-top: 3rem;
     
 
@@ -92,7 +78,7 @@ $white: #FFFFFF;
             margin: 2rem auto;
             display: flex;
             justify-self: center;
-            color: $dark-gray-2;
+            color: colors.$dark-gray-2;
             
         }
 
