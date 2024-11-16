@@ -1,7 +1,77 @@
 @use 'colors';
 
-.card{
-    background-color: colors.$primary;
-    width: 292px;
-    height: 439px;
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+.product-lista-div {
+
+    border-style: none;
+    max-width: 70%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    box-sizing: border-box;
+
+
+    .product-item {
+        overflow:initial;
+        text-align: center;
+        padding: 0 16px 0;
+
+    }
+
+    .product-info {
+        justify-items: start;
+        gap: 20px;
+    }
+
+    .product-img {
+        width: 292px;
+        height: 321px;
+        object-fit: cover;
+        margin-bottom: 16px;
+    }
+
+    .product-type {
+        font-size: 12px;
+        font-weight: 700;
+        color: colors.$light-gray;
+        letter-spacing: 0.75px;
+        line-height: 24px;
+        margin: auto 0;
+    }
+
+    .product-name {
+        font-size: 24px;
+        font-weight: 400;
+        margin-bottom: auto ;
+        display: flex;
+        justify-content: start;
+        color:colors.$dark-gray-2;
+    }
+
+    .product-prices{
+        display: flex;
+        gap: 10px;
+
+        .product-price {
+            font-size: 16px;
+            text-decoration: line-through;
+            font-weight: 400;
+            color: colors.$light-gray;
+            font-size: 24px;
+            line-height: 38px;
+            letter-spacing: 0.75px;
+    
+        }
+
+        .product-price-discount{
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 38px;
+            color: colors.$dark-gray;
+            letter-spacing: 0.75px;
+        }
+    }
+
 }

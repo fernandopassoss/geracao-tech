@@ -3,18 +3,19 @@
 
 .listing-cabecario{
 
-    max-width: 80%;
+    max-width: 69%;
     display: flex;
     margin-top: 10% ; 
     margin-left: auto;
     margin-right: auto;
     justify-content: space-between; 
-    padding: 10px 0;  
+    
     align-items: center;
 
     .listing-cabecario-item1{
         font-size: 24px;
-        font-weight: bold;
+        font-weight:500 
+       
     }
 
     .listing-cabecario-item2{
@@ -35,13 +36,4 @@
             font-size: 24px;
         }
     }
-}
-
-.listing{
-    background-color: colors.$warning;
-    max-width: 80%;
-    display: flex;
-    margin: auto;
-    height: 800px;
-    border-radius: 10px;
 }

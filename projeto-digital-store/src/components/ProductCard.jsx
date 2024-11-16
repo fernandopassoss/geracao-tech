@@ -1,24 +1,26 @@
 import React from 'react';
 import '../styles/ProductCard.scss';
 
-function ProductCard({ items }) { 
+function ProductCard({ items }) {
   return (
-    <div className='card'>
-      {items.map(item => (
-        <div key={item.id} className="product-item">
-          <img src={item.image} />
-          <p>
-            {item.name}
-          </p>
-          <p>
-            {item.price}
-          </p>
-          
+    <div className="product-lista-div">
+      {items.map((item, index) => (
+        <div key={index} className="product-item">
+          <img src={item.image} alt={item.name} className="product-img" />
+          <div className="product-info">
+            <p className="product-type">{item.type}</p>
+            <p className="product-name">{item.name}</p>
+            <div className='product-prices'>
+              <p className="product-price">{`$${item.price}`}</p>
+              <p className='product-price-discount'>{
+                item.priceDiscount !== '' && (
+                  <span>{`$${item.priceDiscount} `}</span>
+                )
+              }</p>
+            </div>
+          </div>
         </div>
       ))}
-      <div>
-        {}
-      </div>
     </div>
   );
 }

@@ -61,16 +61,14 @@ function Header() {
             <div>
                 {ativarComponente === 'home' && (
                     <div style={{backgroundColor:'#F9F8FE'}}>
-                        <Slideshow />
-                        <Section/>
+                        <Section ativarComponente={ativarComponente}/>
                     </div>
                 )}
 
                 {ativarComponente === 'produtos' && (
                     <div>
-                       
-                        
-                        <CollectionFeatured />
+                       <Section  ativarComponente={ativarComponente}/>
+
                     </div>
                 )
                 }
