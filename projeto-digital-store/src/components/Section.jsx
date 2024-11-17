@@ -21,7 +21,7 @@ function Section({ ativarComponente }) {
       {
         ativarComponente === 'produtos' && (
           <>
-            <Slideshow/>
+            <ProducListing/>
           </>
         )
       }
