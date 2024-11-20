@@ -65,7 +65,7 @@ function ProductListing() {
   ]
 
   return (
-    <div style={{ margin: '10% auto'}}>
+    <div >
       <div className='listing-cabecario'>
         <p className='listing-cabecario-item1'>
           Produtos em alta

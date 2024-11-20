@@ -18,7 +18,7 @@ function Header() {
 
 
     return (
-        <div className='teste'>
+        <div>
             <div className='navbar'>
                 <div className="navbar-top">
                     <Logo />

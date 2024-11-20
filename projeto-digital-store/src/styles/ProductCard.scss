@@ -2,16 +2,11 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
-.product-lista-div {
 
-    border-style: none;
-    max-width: 70%;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 16px;
-    box-sizing: border-box;
-
+.product-lista-div{
+    display: flex;
+    flex-wrap: wrap;
+   
 
     .product-item {
         overflow:initial;
@@ -73,7 +68,4 @@
             letter-spacing: 0.75px;
         }
     }
-
 }
-
-
