@@ -80,10 +80,7 @@ function ProductListing() {
       </div>
       <div className='listing'>
         <ProductCard items={items} />
-
-
-
-      </div>
+      </div>  
     </div>
 
   )

@@ -22,6 +22,8 @@ function ProductCard({ items }) {
         </div>
       ))}
     </div>
+    
+    
   );
 }
 

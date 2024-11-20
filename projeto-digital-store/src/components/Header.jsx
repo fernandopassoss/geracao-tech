@@ -15,6 +15,8 @@ function Header() {
         setAtivarComponente(item);
     };
 
+
+
     return (
         <div className='teste'>
             <div className='navbar'>
