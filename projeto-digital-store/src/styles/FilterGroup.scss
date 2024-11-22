@@ -1,0 +1,116 @@
+@use 'colors';
+
+
+.filter-group{
+    max-width: 15%;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    
+
+    .filtrar-por{
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 24px;
+        letter-spacing: 0.75px;
+        color: colors.$dark-gray-2;
+    }
+
+    .barra{
+        display: flex;
+        margin: 0;
+        max-width: 80%;
+    }
+
+    .grupo-1, .grupo-2, .grupo-3, .grupo-4{
+        display: flex;
+        flex-direction: column;
+        font-weight: 500;
+        font-size: 14px;
+        letter-spacing: 0.75px;
+        color:colors.$dark-gray-2;
+        line-height: 22px;
+      
+    }
+
+    .titulo-grupo{
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 22px;
+        letter-spacing: 0.75px;
+        color: colors.$dark-gray-2;
+    }
+
+
+    input[type="checkbox"] {
+        /* Esconde o checkbox padrão */
+        appearance: none;
+        -webkit-appearance: none;
+        width: 22px;
+        height: 22px;
+        border: 1px solid colors.$dark-gray-3;
+        background-color: #fff;
+        cursor: pointer;
+        transition: background-color 0.3s, border-color 0.3s;
+        border-radius: 3px;
+    
+        &:hover {
+          border-color: colors.$primary;
+        }
+    
+        &:checked {
+          background-color: colors.$primary;
+          border-color: colors.$primary;
+          content: url(https://img.icons8.com/?size=100&id=3221&format=png&color=FFFFFF);
+          padding: 2px;
+
+          &::before {
+            align-items: center;
+            justify-content: center;
+            color: white;
+            
+          }
+        }
+      }
+
+      input[type="radio"] {
+        appearance: none; 
+        width: 20px;
+        height: 20px;
+        border: 2px solid #888; 
+        border-radius: 50%; 
+        outline: none;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        position: relative;
+    
+        &:checked {
+          border-color: colors.$primary; 
+          background-color: colors.$primary; 
+    
+          &::after {
+            content: "";
+            width: 12px;
+            height: 12px;
+            background-color: #fff; // Cor do círculo interno
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          }
+        }
+      }
+
+      label{
+        font-size: 14px;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        padding: 5px;
+        input{
+           margin-right : 10px;
+        }
+
+      }
+}

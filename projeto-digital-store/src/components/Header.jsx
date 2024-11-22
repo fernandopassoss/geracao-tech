@@ -7,6 +7,7 @@ import { CiSearch } from "react-icons/ci";
 import Slideshow from './Slideshow';
 import CollectionFeatured from './CollectionFeatured';
 import Section from './Section';
+import {Navigate} from 'react-router-dom';
 
 function Header() {
     const [ativarComponente, setAtivarComponente] = useState('home');
@@ -15,6 +16,7 @@ function Header() {
         setAtivarComponente(item);
     };
 
+    
 
 
     return (
@@ -27,11 +29,11 @@ function Header() {
                         <CiSearch className="search-icon" />
                     </div>
                     <div className='links'>
-                        <a href='#' className='link' id='cadastre-se'>Cadastre-se</a>
-                        <a href='#' className='link'>
+                        <a href='/' className='link' id='cadastre-se'>Cadastre-se</a>
+                        <a href='/' className='link'>
                             <button className='botao'>Entrar</button>
                         </a>
-                        <a href='#' className='link'>
+                        <a href='/' className='link'>
                             <img src={minicart} alt="Mini Cart" />
                         </a>
                     </div>
@@ -43,7 +45,7 @@ function Header() {
                         {ativarComponente === 'home' && <hr className='barra' />}
                     </NavLink>
 
-                    <NavLink to='/' className='link' onClick={() => exibirComponente('produtos')}>
+                    <NavLink to='/' className='link' onClick={() => exibirComponente('produtos')} >
                         <div className={ativarComponente === 'produtos' ? 'ativo' : 'inativo'}>Produtos</div>
                         {ativarComponente === 'produtos' && <hr className='barra' />}
                     </NavLink>
@@ -66,11 +68,10 @@ function Header() {
                         <Section ativarComponente={ativarComponente}/>
                     </div>
                 )}
-
                 {ativarComponente === 'produtos' && (
                     <div>
-                       <Section  ativarComponente={ativarComponente}/>
-
+                        <Navigate to="/produtos"/>
+                       
                     </div>
                 )
                 }

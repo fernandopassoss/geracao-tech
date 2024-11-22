@@ -1,90 +1,102 @@
 import React from 'react'
+import '../styles/FilterGroup.scss'
+
 
 function FilterGroup() {
   return (
-    <div>
-      Filtrar por
-      <hr />
+    <div className='filter-group'>
+      <h2 className='filtrar-por'>
+        Filtrar por
+      </h2>
+      <hr className='barra' />
       <form>
         <fieldset>
-          <legend>
+          <legend className='titulo-grupo'>
             Marka
           </legend>
-          <div>
-            <input type='checkbox'></input>
+          <div className='grupo-1'>
             <label>
+              <input type='checkbox' className='input-checkbox'></input>
               Adiddas
             </label>
-            <input type='checkbox'></input>
             <label>
+              <input type='checkbox'></input>
               Calendiaga
             </label>
-            <input type='checkbox'></input>
             <label>
+              <input type='checkbox'></input>
               Nike
             </label>
-            <input type='checkbox'></input>
             <label>
+              <input type='checkbox'></input>
               Puma
             </label>
           </div>
         </fieldset>
         <fieldset>
-          <legend>
+          <legend className='titulo-grupo'>
             Categoria
           </legend>
-          <div>
-            <input type='checkbox'></input>
+          <div className='grupo-2'>
             <label>
+              <input type='checkbox'></input>
+
               Esporte e lazer
             </label>
-            <input type='checkbox'></input>
             <label>
+              <input type='checkbox'></input>
+
               Casual
             </label>
-            <input type='checkbox'></input>
             <label>
+              <input type='checkbox'></input>
+
               Utilitário
             </label>
-            <input type='checkbox'></input>
             <label>
+              <input type='checkbox'></input>
+
               Corrida
             </label>
           </div>
         </fieldset>
         <fieldset>
-          <legend>
+          <legend className='titulo-grupo'>
             Gênero
           </legend>
-          <div>
-            <input type='checkbox'></input>
+          <div className='grupo-3'>
             <label>
+              <input type='checkbox'></input>
               Masculino
             </label>
-            <input type='checkbox'></input>
             <label>
+              <input type='checkbox'></input>
+
               Feminino
             </label>
-            <input type='checkbox'></input>
             <label>
+              <input type='checkbox'></input>
+
               Unissex
             </label>
           </div>
           <fieldset>
-          <legend>
-            Marka
-          </legend>
-          <div>
-            <input type='radio' name='estado'></input>
-            <label>
-              Novo
-            </label>
-            <input type='radio' name='estado'></input>
-            <label>
-              Usado
-            </label>
-          </div>
-        </fieldset>
+            <legend className='titulo-grupo'>
+              Marka
+            </legend>
+            <div className='grupo-4'>
+              <label>
+                <input type='radio' name='estado'></input>
+
+                Novo
+              </label>
+              <label>
+                <input type='radio' name='estado'></input>
+
+                Usado
+              </label>
+            </div>
+          </fieldset>
         </fieldset>
 
 

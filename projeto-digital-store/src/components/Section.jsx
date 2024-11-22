@@ -3,8 +3,7 @@ import CollectionFeatured from './CollectionFeatured'
 import SpecialOffer from './SpecialOffer'
 import ProducListing from './ProductListing'
 import Slideshow from './Slideshow'
-import FilterGroup from './FilterGroup'
-import ProductListingPage from '../pages/ProductListingPage'
+
 
 function Section({ ativarComponente }) {
   return (
@@ -23,7 +22,7 @@ function Section({ ativarComponente }) {
       {
         ativarComponente === 'produtos' && (
           <>
-              <ProductListingPage/>
+              <ProducListing/>
            
           </>
         )
