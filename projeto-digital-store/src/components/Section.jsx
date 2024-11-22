@@ -3,6 +3,8 @@ import CollectionFeatured from './CollectionFeatured'
 import SpecialOffer from './SpecialOffer'
 import ProducListing from './ProductListing'
 import Slideshow from './Slideshow'
+import ProductListingPage from '../pages/ProductListingPage'
+import { Link, Navigate } from 'react-router-dom'
 
 
 function Section({ ativarComponente }) {
@@ -22,12 +24,10 @@ function Section({ ativarComponente }) {
       {
         ativarComponente === 'produtos' && (
           <>
-              <ProducListing/>
-           
+            <ProducListing/>
           </>
         )
       }
-
     </div>
   )
 }

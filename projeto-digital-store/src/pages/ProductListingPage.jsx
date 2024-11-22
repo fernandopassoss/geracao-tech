@@ -8,9 +8,8 @@ import '../styles/ProductListingPage.scss'
 function ProductListingPage() {
   return (
     <div >
-      <Header />
+      <Header ativarStyleProdutos={true}/>
       <div className='product-listing-page'>
-      
       <div className='div-product-filter'>
         <FilterGroup />
       </div>
@@ -18,7 +17,7 @@ function ProductListingPage() {
         <Section ativarComponente={'produtos'}/> 
       </div>
       </div>
-      <Footer />
+      
     </div>
   )
 }
