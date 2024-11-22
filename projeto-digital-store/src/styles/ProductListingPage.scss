@@ -1,5 +1,21 @@
 @use 'colors';
 
-.product-listing-page{
-  
+.product-listing-page {
+    display: flex;
+    justify-content: space-between;
+    max-width: 80%;
+    margin: auto;
+
+    .div-product-filter {
+        width: 25%;
+        height: 300px;
+     
+       
+    }
+
+    .div-product-listing {
+        width: 80%;
+        height: 300px;
+      
+    }
 }

@@ -2,7 +2,7 @@
 
 
 .filter-group{
-    max-width: 15%;
+ 
     display: flex;
     flex-direction: column;
     background-color: white;
@@ -20,6 +20,7 @@
         display: flex;
         margin: 0;
         max-width: 80%;
+       
     }
 
     .grupo-1, .grupo-2, .grupo-3, .grupo-4{
@@ -43,7 +44,7 @@
 
 
     input[type="checkbox"] {
-        /* Esconde o checkbox padrão */
+       
         appearance: none;
         -webkit-appearance: none;
         width: 22px;

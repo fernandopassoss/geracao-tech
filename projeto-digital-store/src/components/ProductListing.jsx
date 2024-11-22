@@ -2,7 +2,8 @@ import React from 'react'
 import '../styles/ProductListing.scss'
 import { BsArrowRight } from "react-icons/bs";
 import ProductCard from './ProductCard';
-function ProductListing() {
+
+function ProductListing({paginaProdutos}) {
 
 
   const items = [
@@ -66,19 +67,19 @@ function ProductListing() {
 
   return (
     <div >
-      <div className='listing-cabecario'>
-        <p className='listing-cabecario-item1'>
+      <div className={paginaProdutos===true? 'listing-cabecario-ativo' : 'listing-cabecario'}>
+        <p className={paginaProdutos===true? 'listing-cabecario-item1-ativo': 'listing-cabecario-item1'}>
           Produtos em alta
         </p>
-        <div className='listing-cabecario-item2'>
-          <a href='#' className='cabecario-link'>
+        <div className={paginaProdutos===true? 'listing-cabecario-item2-ativo': 'listing-cabecario-item2'}>
+          <a href='#' className={paginaProdutos===true?'cabecario-link-ativo': 'cabecario-link'}>
             Ver todos
           </a>
-          <BsArrowRight className='cabecario-seta' />
+          <BsArrowRight className={paginaProdutos==true?'cabecario-seta-ativo': 'cabecario-seta'} />
         </div>
 
       </div>
-      <div className='listing'>
+      <div className={paginaProdutos===true?'listing-ativo':'listing'}>
         <ProductCard items={items} />
       </div>  
     </div>

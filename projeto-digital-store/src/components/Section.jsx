@@ -18,13 +18,13 @@ function Section({ ativarComponente }) {
             <ProducListing />
             <SpecialOffer />
           </>
-        )
+        ) 
       }
 
       {
         ativarComponente === 'produtos' && (
           <>
-            <ProducListing/>
+            <ProducListing paginaProdutos={true}/>
           </>
         )
       }

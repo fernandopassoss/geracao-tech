@@ -7,18 +7,21 @@ import '../styles/ProductListingPage.scss'
 
 function ProductListingPage() {
   return (
-    <div >
-      <Header ativarStyleProdutos={true}/>
-      <div className='product-listing-page'>
+    <>
+   
+       <div className='product-listing-page'>
       <div className='div-product-filter'>
-        <FilterGroup />
+       
+      <FilterGroup />
       </div>
       <div className='div-product-listing'>
+   
         <Section ativarComponente={'produtos'}/> 
       </div>
       </div>
-      
-    </div>
+   
+      </>
+   
   )
 }
 

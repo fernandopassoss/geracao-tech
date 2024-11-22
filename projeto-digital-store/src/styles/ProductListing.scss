@@ -11,7 +11,7 @@
 
     .listing-cabecario-item1{
         font-size: 24px;
-        font-weight:500 
+        font-weight:500; 
        
     }
 
@@ -38,4 +38,43 @@
 .listing{
     max-width: 69%;
     margin: 20px auto;
+}
+
+
+.listing-cabecario-ativo{
+    max-width: 80%;
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+    margin-left: 2%;
+
+    .listing-cabecario-item1-ativo{
+        font-size: 24px;
+        font-weight:500 
+       
+    }
+
+    .listing-cabecario-item2-ativo{
+        cursor: pointer;
+        display: flex;
+        gap: 10px;
+        
+
+        .cabecario-link-ativo{
+            text-decoration: none;
+            color: colors.$dark-gray;
+            font-size: 18px;
+            color: colors.$primary;
+        }
+        .cabecario-seta-ativo{
+            font-size: 30px;
+            color: colors.$primary;
+            font-size: 24px;
+        }
+    }
+}
+
+.listing-ativo{
+    max-width:100%;
+    
 }
