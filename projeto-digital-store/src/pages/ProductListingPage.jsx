@@ -8,7 +8,7 @@ import '../styles/ProductListingPage.scss'
 function ProductListingPage() {
   return (
     <>
-   
+      <Header/>
        <div className='product-listing-page'>
       <div className='div-product-filter'>
        

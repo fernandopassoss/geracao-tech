@@ -1,35 +1,49 @@
-import React from 'react'
-import CollectionFeatured from './CollectionFeatured'
-import SpecialOffer from './SpecialOffer'
-import ProducListing from './ProductListing'
-import Slideshow from './Slideshow'
-import ProductListingPage from '../pages/ProductListingPage'
-import { Link, Navigate } from 'react-router-dom'
+  import React from 'react'
+  import CollectionFeatured from './CollectionFeatured'
+  import SpecialOffer from './SpecialOffer'
+  import ProducListing from './ProductListing'
+  import Slideshow from './Slideshow'
 
 
-function Section({ ativarComponente }) {
-  return (
-    <div style={{ backgroundColor: '#F9F8FE' }}>
-      {
-        ativarComponente === 'home' && (
-          <>
-            <Slideshow />
-            <CollectionFeatured />
-            <ProducListing />
-            <SpecialOffer />
-          </>
-        ) 
-      }
+  function Section({ ativarComponente }) {
+    return (
+      <div style={{ backgroundColor: '#F9F8FE' }}>
+        {
+          ativarComponente === 'home' && (
+            <>
+              <Slideshow />
+              <CollectionFeatured />
+              <ProducListing />
+              <SpecialOffer />
+            </>
+          )
+        }
 
-      {
-        ativarComponente === 'produtos' && (
-          <>
-            <ProducListing paginaProdutos={true}/>
-          </>
-        )
-      }
-    </div>
-  )
-}
+        {
+          ativarComponente === 'produtos' && (
+            <>
+              <ProducListing paginaProdutos={true} />
+            </>
+          )
+        }
 
-export default Section
+        {
+          ativarComponente === 'categorias' && (
+            <div style={{ width: '100%', height: '310px' }}>
+
+            </div>
+          )
+        }
+
+        {
+          ativarComponente === 'pedidos' && (
+            <div style={{ width: '100%', height: '310px' }}>
+
+            </div>
+          )
+        }
+      </div>
+    )
+  }
+
+  export default Section

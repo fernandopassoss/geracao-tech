@@ -4,10 +4,8 @@ import Logo from './Logo';
 import minicart from '../assets/mini-cart.svg';
 import { NavLink } from 'react-bootstrap';
 import { CiSearch } from "react-icons/ci";
-import Slideshow from './Slideshow';
-import CollectionFeatured from './CollectionFeatured';
 import Section from './Section';
-import { Navigate, Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 function Header({ativarStyleProdutos}) {
     const [ativarComponente, setAtivarComponente] = useState('home');
@@ -16,8 +14,7 @@ function Header({ativarStyleProdutos}) {
         setAtivarComponente(item);
     };
 
-
-
+    const location = useLocation();
 
     return (
         <div>
@@ -40,28 +37,24 @@ function Header({ativarStyleProdutos}) {
                 </div>
 
                 <div className="navbar-bot">
-                    <NavLink to='/' className='link' onClick={() => exibirComponente('home')}>
-                        <div className={ativarComponente === 'home' ? 'ativo' : 'inativo'}>Home</div>
-                        {ativarComponente === 'home' && <hr className='barra' />}
-                    </NavLink>
-
-
-                    <Link to='/produtos' className='link'  target="_blank" rel="noopener noreferrer" style={{textDecoration:'none'}}>
-
-                        <div className={ativarComponente === 'produtos' ? 'ativo' : 'inativo'}>Produtos</div>
-                        {ativarComponente === 'produtos' && <hr className='barra' />}
-
+                    <Link to='/' className='link' style={{textDecoration:'none'}}>
+                        <div className={location.pathname === '/' ? 'ativo' : 'inativo'}>Home</div>
+                        {location.pathname === '/' && <hr className='barra' />}
                     </Link>
 
+                    <Link to='/produtos' className='link'   style={{textDecoration:'none'}}>
+                        <div className={location.pathname === '/produtos' ? 'ativo' : 'inativo'}>Produtos</div>
+                        {location.pathname === '/produtos' && <hr className='barra' />}
+                    </Link>
 
-                    <NavLink to='/' className='link' onClick={() => exibirComponente('categorias')}>
-                        <div className={ativarComponente === 'categorias' ? 'ativo' : 'inativo'}>Categorias</div>
-                        {ativarComponente === 'categorias' && <hr className='barra' />}
+                    <NavLink to='/' className='link' >
+                        <div className={location.pathname === '/categorias' ? 'ativo' : 'inativo'}>Categorias</div>
+                        {location.pathname === '/categorias' && <hr className='barra' />}
                     </NavLink>
 
-                    <NavLink to='/' className='link' onClick={() => exibirComponente('pedidos')}>
-                        <div className={ativarComponente === 'pedidos' ? 'ativo' : 'inativo'}>Meus Pedidos</div>
-                        {ativarComponente === 'pedidos' && <hr className='barra' />}
+                    <NavLink to='/' className='link'>
+                        <div className={location.pathname === '/pedidos' ? 'ativo' : 'inativo'}>Meus Pedidos</div>
+                        {location.pathname === '/pedidos' && <hr className='barra' />}
                     </NavLink>
 
                     <div>
@@ -70,30 +63,6 @@ function Header({ativarStyleProdutos}) {
                 </div>
             </div>
 
-            <div>
-                {ativarComponente === 'home' && (
-                    <div style={{ backgroundColor: '#F9F8FE' }}>
-                        <Section ativarComponente={ativarComponente} />
-                    </div>
-                )}
-
-
-                {ativarComponente === 'categorias' && (
-                    <div>
-                        <Slideshow />
-                        <CollectionFeatured />
-                    </div>
-                )
-                }
-
-                {ativarComponente === 'pedidos' && (
-                    <div>
-                        <Slideshow />
-                        <CollectionFeatured />
-                    </div>
-                )
-                }
-            </div>
         </div>
     );
 }
