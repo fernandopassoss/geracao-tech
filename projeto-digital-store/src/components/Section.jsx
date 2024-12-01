@@ -7,7 +7,7 @@
 
   function Section({ ativarComponente }) {
     return (
-      <div style={{ backgroundColor: '#F9F8FE' }}>
+      <div >
         {
           ativarComponente === 'home' && (
             <>
