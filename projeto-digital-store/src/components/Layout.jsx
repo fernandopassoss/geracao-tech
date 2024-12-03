@@ -9,20 +9,38 @@ import ProductListing from './ProductListing';
 const Layout = ({ children }) => {
   return (
     <div className="layout">
-      <Header/>
+      
        <div style={{ backgroundColor: '#F9F8FE' }}>
         {
           children === 'homepage' && (
             <>
+              <Header/>
               <Slideshow />
               <CollectionFeatured />
               <ProductListing />
               <SpecialOffer />
+              <Footer/>
+            </>
+          )
+        }
+
+        {
+          children === 'header' &&(
+            <>
+              <Header/>
+            </>
+          )
+        }
+
+{
+          children === 'footer' &&(
+            <>
+              <Footer/>
             </>
           )
         }
         </div>
-        <Footer/>
+       
     </div>
   );
 };

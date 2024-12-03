@@ -4,7 +4,6 @@ import Logo from './Logo';
 import minicart from '../assets/mini-cart.svg';
 import { NavLink } from 'react-bootstrap';
 import { CiSearch } from "react-icons/ci";
-import Section from './Section';
 import { Link, useLocation } from 'react-router-dom';
 
 function Header({ativarStyleProdutos}) {
