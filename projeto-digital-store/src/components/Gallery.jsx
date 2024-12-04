@@ -1,54 +1,39 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
+import homeslide2 from '../public/home-slide-2.jpeg';
+import homeslide3 from '../public/home-slide-3.jpeg';
+import homeslide4 from '../public/home-slide-4.jpeg';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Thumbs, FreeMode } from 'swiper'; // Importando os módulos necessários
+
+
 import 'swiper/css';
 import 'swiper/css/navigation';
-import 'swiper/css/thumbs';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
 
 function Gallery() {
-  const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
-  const images = [
-    { src: '/home-slide-1.jpeg', alt: 'Slide 1' },
-    { src: '/home-slide-2.jpeg', alt: 'Slide 2' },
-    { src: '/home-slide-3.jpeg', alt: 'Slide 3' },
-    { src: '/home-slide-4.jpeg', alt: 'Slide 4' },
-    { src: '/home-slide-5.jpeg', alt: 'Slide 5' },
-  ];
 
   return (
     <div className="gallery">
-      {/* Slider principal */}
       <Swiper
-        style={{ "--swiper-navigation-color": "#fff", "--swiper-pagination-color": "#fff" }}
-        modules={[Navigation, Thumbs]}
-        navigation
-        thumbs={{ swiper: thumbsSwiper }}
-        spaceBetween={10}
-        className="main-swiper"
+      modules={[Navigation, Pagination, Scrollbar, A11y]}
+      spaceBetween={50}
+      slidesPerView={3}
+      navigation
+      pagination={{ clickable: true }}
+      scrollbar={{ draggable: true }}
+      onSwiper={(swiper) => console.log(swiper)}
+      onSlideChange={() => console.log('slide change')}
       >
-        {images.map((image, index) => (
-          <SwiperSlide key={index}>
-            <img src={image.src} alt={image.alt} className="main-image" />
-          </SwiperSlide>
-        ))}
-      </Swiper>
-
-      {/* Slider de miniaturas */}
-      <Swiper
-        onSwiper={setThumbsSwiper}
-        spaceBetween={10}
-        slidesPerView={4}
-        freeMode
-        watchSlidesProgress
-        modules={[FreeMode, Thumbs]}
-        className="thumbs-swiper"
-      >
-        {images.map((image, index) => (
-          <SwiperSlide key={index}>
-            <img src={image.src} alt={image.alt} className="thumbnail-image" />
-          </SwiperSlide>
-        ))}
+        <SwiperSlide>
+          <img src={homeslide2} className='slide-item'></img>
+          
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src={homeslide3} className='slide-item'></img>
+          
+        </SwiperSlide>
       </Swiper>
     </div>
   );
