@@ -1,40 +1,38 @@
 import React from 'react';
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
-import homeslide2 from '../public/home-slide-2.jpeg';
-import homeslide3 from '../public/home-slide-3.jpeg';
-import homeslide4 from '../public/home-slide-4.jpeg';
-import { Swiper, SwiperSlide } from 'swiper/react';
-
+import { Swiper, SwiperSlide, useSwiper } from 'swiper/react';
+import '../styles/Gallery.scss'
 
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 
+
 function Gallery() {
 
-
+  const imagens =[
+    {imagem: require('../public/produc-image-1.jpeg')},
+    {imagem: require('../public/produc-image-2.jpeg')},
+    {imagem: require('../public/produc-image-3.jpeg')}
+]
+  
   return (
     <div className="gallery">
-      <Swiper
-      modules={[Navigation, Pagination, Scrollbar, A11y]}
-      spaceBetween={50}
-      slidesPerView={3}
-      navigation
-      pagination={{ clickable: true }}
-      scrollbar={{ draggable: true }}
-      onSwiper={(swiper) => console.log(swiper)}
-      onSlideChange={() => console.log('slide change')}
-      >
-        <SwiperSlide>
-          <img src={homeslide2} className='slide-item'></img>
+        <Swiper
+        slidesPerView={1}
+        navigation  
+        pagination={{clickable:true}}
+        scrollbar={{draggable:true}}
+      
+        >   
+          {imagens.map((item)=>(
+            <SwiperSlide key={item.id}>
+              <img src={item.imagem} alt='Slider' className='slide-item'></img>
+        
+              </SwiperSlide>
+          ))}
           
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={homeslide3} className='slide-item'></img>
-          
-        </SwiperSlide>
-      </Swiper>
+        </Swiper>
     </div>
   );
 }
