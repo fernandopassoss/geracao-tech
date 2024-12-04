@@ -11,7 +11,16 @@ import homeslide8 from '../public/home-slide-8.jpeg';
 
 function Slideshow() {
     const [slideIndex, setSlideIndex] = useState(0);
-    const slides = [homeslide2, homeslide7];
+    const slides = [
+        homeslide2, 
+        homeslide7, 
+        homeslide1, 
+        homeslide3, 
+        homeslide4, 
+        homeslide5, 
+        homeslide6, 
+        homeslide8
+    ];
 
 
     useEffect(() => {
