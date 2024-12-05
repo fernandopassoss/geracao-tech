@@ -9,9 +9,7 @@ function ProductViewPage() {
 
   return (
     <div>
-      <Layout children={'header'}/>
-      <Gallery/>
-      <Layout children={'footer'}/>
+      <Layout children={'productviewpage'}/>
     </div>
   )
 }

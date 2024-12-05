@@ -5,42 +5,60 @@ import Slideshow from './Slideshow';
 import CollectionFeatured from './CollectionFeatured';
 import SpecialOffer from './SpecialOffer';
 import ProductListing from './ProductListing';
+import Gallery from './Gallery';
+import BuyBox from './BuyBox';
+import '../styles/Layout.scss'
+
 
 const Layout = ({ children }) => {
+  
   return (
     <div className="layout">
-      
-       <div style={{ backgroundColor: '#F9F8FE' }}>
+
+      <div>
         {
           children === 'homepage' && (
             <>
-              <Header/>
+              <Header />
               <Slideshow />
               <CollectionFeatured />
               <ProductListing />
               <SpecialOffer />
-              <Footer/>
+              <Footer />
             </>
           )
         }
 
         {
-          children === 'header' &&(
+          children === 'header' && (
             <>
-              <Header/>
+              <Header />
             </>
           )
         }
 
-{
-          children === 'footer' &&(
+        {
+          children === 'footer' && (
             <>
-              <Footer/>
+              <Footer />
             </>
           )
         }
-        </div>
-       
+        {
+          children === 'productviewpage' && (
+            <>
+              <Header />
+              <div className='gallery-buybox' style={{ backgroundColor: '#F9F8FE' }}>
+                <Gallery className='section-gallery' />
+                <BuyBox className='section-buybox' />
+              </div>
+              <ProductListing />
+              <Footer />
+            </>
+          )
+        }
+      </div>
+
     </div>
   );
 };

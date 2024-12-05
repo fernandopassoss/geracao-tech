@@ -1,0 +1,21 @@
+@use 'colors';
+
+
+.gallery-buybox{
+    display: flex;
+    flex-direction:row;
+    width: 100%;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    justify-content: center;
+    gap:150px;
+
+    .section-gallery{
+        background-color: colors.$primary;
+    }
+    .section-buybox{
+        background-color: colors.$dark-gray-2;
+    }
+
+    
+}

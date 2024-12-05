@@ -18,9 +18,7 @@ function Gallery() {
     homeslide3,
     homeslide4,
     homeslide5,
-    homeslide6,
-    homeslide7,
-    homeslide8,
+    homeslide6
   ];
 
   const goToSlide = (index) => {
@@ -36,7 +34,7 @@ function Gallery() {
 
   return (
     <div className="gallery" style={{ backgroundColor: '#F9F8FE' }}>
-      {/* Slideshow Principal */}
+    
       <div className="gallery-slideshow-container">
         {slides.map((slide, index) => (
           <div
@@ -52,6 +50,7 @@ function Gallery() {
       
       <div className="gallery-thumbnails">
         {slides.map((slide, index) => (
+          index < 5 &&(
           <img
             key={index}
             src={slide}
@@ -59,6 +58,7 @@ function Gallery() {
             className={`gallery-thumbnail ${index === slideIndex ? 'active' : ''}`}
             onClick={() => goToSlide(index)}
           />
+          )
         ))}
       </div>
     </div>
