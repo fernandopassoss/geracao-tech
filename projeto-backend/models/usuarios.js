@@ -31,4 +31,4 @@ const Usuario = database.define('usuarios', {
     updatedAt: 'atualizadoEm'
 })
 
-module.exports = Produto;
+module.exports = Usuario;
