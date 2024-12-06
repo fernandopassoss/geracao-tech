@@ -5,7 +5,7 @@ function ProductCard({ items }) {
   return (
     <div className="product-lista-div">
       {items.map((item, index) => (
-        <div key={index} className="product-item">
+        <div key={index} className="product-item"><a href='http://localhost:3000/produtos/tenis' id='link-card'> 
           <img src={item.image} alt={item.name} className="product-img" />
           <div className="product-info">
             <p className="product-type">{item.type}</p>
@@ -19,6 +19,7 @@ function ProductCard({ items }) {
               }</p>
             </div>
           </div>
+          </a>
         </div>
       ))}
     </div>

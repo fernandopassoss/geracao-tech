@@ -7,6 +7,9 @@
     display: flex;
     flex-wrap: wrap;
    
+    #link-card{
+        text-decoration: none;
+    }
 
     .product-item {
         overflow:initial;
