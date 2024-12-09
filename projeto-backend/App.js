@@ -1,11 +1,10 @@
 const express = require('express');
 const app = express();
-const sequelize = require('./config/db');
-const usuarioRoute = require('./routes/usuarioRoute');
+const sequelize = require('./src/config/db');
+
 
 app.use(express.json());
 
-app.use('/v1/user', usuarioRoute);
 
 sequelize.sync().then(() => {
     console.log('Database connected!');
