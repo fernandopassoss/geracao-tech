@@ -2,13 +2,6 @@
 
 # dependencies
 /node_modules
-/models
-/migrations
-/index.js
-/config
-/seeders
-/package.json
-/.pnp
 .pnp.js
 
 # testing
